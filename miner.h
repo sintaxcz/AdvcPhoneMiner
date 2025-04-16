@@ -709,6 +709,7 @@ static const char* const algo_names[] = {
         "phi2",
         "polytimos",
         "power2b",
+		"power2badvc",
         "quark",
         "qubit",
         "scrypt",
@@ -869,6 +870,7 @@ Options:\n\
                           phi2\n\
                           polytimos\n\
                           power2b       MicroBitcoin (MBC)\n\
+						  power2badvc   AdventureCoin (ADVC)\n\
                           quark         Quark\n\
                           qubit         Qubit\n\
                           scrypt        scrypt(1024, 1, 1) (default)\n\
