@@ -312,6 +312,33 @@ bool register_power2b_algo( algo_gate_t* gate )
   return true;
 };
 
+// POWER2BADVC
+
+bool register_power2badvc_algo( algo_gate_t* gate )
+{
+  yespower_params.version = YESPOWER_1_0;
+
+  yespower_params.N = 2048;
+  yespower_params.r = 32;
+  yespower_params.pers = "Let the quest begin";
+  yespower_params.perslen = 46;
+
+  applog( LOG_NOTICE,"yespower-b2b parameters: N= %d, R= %d", yespower_params.N,
+                                                           yespower_params.r );
+  applog( LOG_NOTICE,"Key= \"%s\"", yespower_params.pers );
+  applog( LOG_NOTICE,"Key length= %d\n", yespower_params.perslen );
+
+  gate->optimizations = SSE2_OPT | AVX2_OPT | NEON_OPT;
+  gate->scanhash      = (void*)&scanhash_yespower_b2b;
+#if (__SSE2__) || defined(__aarch64__)
+  gate->hash          = (void*)&yespower_b2b_hash;
+#else
+  gate->hash          = (void*)&yespower_b2b_hash_ref;
+#endif
+  opt_target_factor = 65536.0;
+  return true;
+};
+
 // Generic yespower + blake2b
 bool register_yespower_b2b_algo( algo_gate_t* gate )
 {
