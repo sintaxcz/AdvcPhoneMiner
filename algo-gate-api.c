@@ -331,7 +331,7 @@ bool register_algo_gate( int algo, algo_gate_t *gate )
     case ALGO_PHI2:         rc = register_phi2_algo          ( gate ); break;
     case ALGO_POLYTIMOS:    rc = register_polytimos_algo     ( gate ); break;
     case ALGO_POWER2B:      rc = register_power2b_algo       ( gate ); break;
-	case ALGO_POWER2Badvc:      rc = register_power2badvc_algo       ( gate ); break;
+	case ALGO_POWER2BADVC:      rc = register_power2badvc_algo       ( gate ); break;
     case ALGO_QUARK:        rc = register_quark_algo         ( gate ); break;
     case ALGO_QUBIT:        rc = register_qubit_algo         ( gate ); break;
     case ALGO_SCRYPT:       rc = register_scrypt_algo        ( gate ); break;

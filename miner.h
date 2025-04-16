@@ -613,6 +613,7 @@ enum algos {
         ALGO_PHI2,
         ALGO_POLYTIMOS,
         ALGO_POWER2B,
+		ALGO_POWER2BADVC,
         ALGO_QUARK,
         ALGO_QUBIT,       
         ALGO_SCRYPT,
