@@ -331,7 +331,7 @@ bool register_algo_gate( int algo, algo_gate_t *gate )
     case ALGO_PHI2:         rc = register_phi2_algo          ( gate ); break;
     case ALGO_POLYTIMOS:    rc = register_polytimos_algo     ( gate ); break;
     case ALGO_POWER2B:      rc = register_power2b_algo       ( gate ); break;
-	case ALGO_POWER2BADVC:      rc = register_power2badvc_algo       ( gate ); break;
+	case ALGO_POWER2BADVC:  rc = register_power2badvc_algo   ( gate ); break;
     case ALGO_QUARK:        rc = register_quark_algo         ( gate ); break;
     case ALGO_QUBIT:        rc = register_qubit_algo         ( gate ); break;
     case ALGO_SCRYPT:       rc = register_scrypt_algo        ( gate ); break;
@@ -380,6 +380,7 @@ bool register_algo_gate( int algo, algo_gate_t *gate )
     case ALGO_YESCRYPTR32:  rc = register_yescryptr32_algo   ( gate ); break;
     case ALGO_YESPOWER:     rc = register_yespower_algo      ( gate ); break;
     case ALGO_YESPOWERR16:  rc = register_yespowerr16_algo   ( gate ); break;
+	case ALGO_YESPOWERADVC: rc = register_yespoweradvc_algo  ( gate ); break;
     case ALGO_YESPOWER_B2B: rc = register_yespower_b2b_algo  ( gate ); break;
     case ALGO_ZR5:          rc = register_zr5_algo           ( gate ); break;
    default:

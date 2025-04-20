@@ -191,6 +191,24 @@ bool register_yespowerr16_algo( algo_gate_t* gate )
   return true;
  };
 
+bool register_yespoweradvc_algo( algo_gate_t* gate )
+{
+  yespower_params.version = YESPOWER_1_0;
+  yespower_params.N       = 2048;
+  yespower_params.r       = 32;
+  yespower_params.pers    = "Let the quest begin";
+  yespower_params.perslen = 19;
+  gate->optimizations     = SSE2_OPT | SHA256_OPT | NEON_OPT;
+  gate->scanhash          = (void*)&scanhash_yespower;
+#if (__SSE2__) || defined(__aarch64__)
+  gate->hash              = (void*)&yespower_hash;
+#else
+  gate->hash              = (void*)&yespower_hash_ref;
+#endif
+  opt_target_factor = 65536.0;
+  return true;
+ };
+ 
 // Legacy Yescrypt (yespower v0.5)
 
 bool register_yescrypt_algo( algo_gate_t* gate )
@@ -266,6 +284,7 @@ bool register_yescryptr16_algo( algo_gate_t* gate )
    opt_target_factor = 65536.0;
    return true;
 }
+
 
 bool register_yescryptr32_algo( algo_gate_t* gate )
 {
