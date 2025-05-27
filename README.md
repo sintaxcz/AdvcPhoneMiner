@@ -11,7 +11,7 @@ lscpu
 ```
 Install AdventureCoin miner and set it to auto start on phone boot with the following (replace pool url, wallet address, password, and thread count with your settings)
 ```bash
-apt update -y && apt install wget -y && wget https://raw.githubusercontent.com/TheRetroMike/AdvcPhoneMiner/main/termux_install.sh && chmod +x termux_install.sh && ./termux_install.sh "stratum+tcp://retromike.net:5018" "AUj1eDiQU2JZGXfZKcXk17npLZo6LkdnDw" "x" "8" && rm termux_install.sh
+apt update -y && apt install wget -y && wget https://raw.githubusercontent.com/TheRetroMike/AdvcPhoneMiner/refs/heads/master/termux_install.sh && chmod +x termux_install.sh && ./termux_install.sh "stratum+tcp://retromike.net:5018" "AUj1eDiQU2JZGXfZKcXk17npLZo6LkdnDw" "x" "8" && rm termux_install.sh
 ```
 If you want to modify your settings later, you can always do so by adjust the startup.sh file
 ```
