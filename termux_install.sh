@@ -1,3 +1,4 @@
+killall screen
 apt update -y 
 apt install libcurl openssl libjansson automake build-essential screen git -y
 git clone https://github.com/TheRetroMike/AdvcPhoneMiner.git advcphoneminer
