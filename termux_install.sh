@@ -1,7 +1,8 @@
 killall screen
 apt update -y 
+rm -rf advc_miner
 apt install libcurl openssl libjansson automake build-essential screen git -y
-git clone https://github.com/TheRetroMike/AdvcPhoneMiner.git advcphoneminer
+git clone https://github.com/TheRetroMike/AdvcPhoneMiner.git advc_miner
 cd advcphoneminer
 ./build-armv8.sh
 cd ~
