@@ -1,9 +1,10 @@
 killall screen
 apt update -y 
+rm -rf advcphoneminer
 rm -rf advc_miner
 apt install libcurl openssl libjansson automake build-essential screen git -y
 git clone https://github.com/TheRetroMike/AdvcPhoneMiner.git advc_miner
-cd advcphoneminer
+cd advc_miner
 ./build-armv8.sh
 cd ~
 #echo "screen -dmS miner ~/ccminer/ccminer -a verus -o stratum+tcp://na.luckpool.net:3960 -u RKbgnfWAbL43K1HrxLoWcDzRmTspYFRj6U -p x -t 6" > startup.sh
