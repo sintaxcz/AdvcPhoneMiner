@@ -7,7 +7,7 @@ Quick installation of AdventureCoin mining on Android Phones
 https://github.com/termux/termux-app/releases/download/v0.118.3/termux-app_v0.118.3+github-debug_arm64-v8a.apk
 ```
 - install Termux Boot app
-- 2. Download & install latest arm64-v8a [Termux Boot](https://github.com/termux/termux-boot/releases/download/v0.8.1/termux-boot-app_v0.8.1+github.debug.apk):
+2. Download & install latest arm64-v8a [Termux Boot](https://github.com/termux/termux-boot/releases/download/v0.8.1/termux-boot-app_v0.8.1+github.debug.apk):
 ```
 https://github.com/termux/termux-boot/releases/download/v0.8.1/termux-boot-app_v0.8.1+github.debug.apk
 ```
